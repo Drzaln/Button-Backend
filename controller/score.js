@@ -17,7 +17,8 @@ module.exports = {
     score
       .getScoreById(id_user)
       .then(resultUser => {
-        respon.response(res, resultUser, 200)
+        const result = resultUser[0]
+        respon.response(res, result, 200)
       })
       .catch(error => {
         console.log(error)
